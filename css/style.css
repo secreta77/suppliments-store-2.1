@@ -11,6 +11,13 @@ html, body {
   background-color: #0e192b;
 }
 
+@view-transition {
+  navigation: auto;
+}
+::view-transition-group {
+  animation-duration: 1s;
+}
+
 .wrapper {
   background-image: url("../images/background-suppliments.avif");
   background-repeat: no-repeat;
@@ -162,11 +169,67 @@ html, body {
   width: 24rem;
   height: 6rem;
   font-size: 2rem;
-  border-radius: 2rem;
+  border-radius: 3rem;
+  background: transparent;
+  color: rgb(140, 218, 63);
+  border: 1px solid rgb(140, 218, 63);
+  margin-top: 3rem;
 }
-.container2 .right-side2 img {
+.container2 .right-side2 {
   width: 53rem;
   height: 59.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container2 .right-side2 .image {
+  position: relative;
+  display: flex;
+  width: 53rem;
+  height: 59.3rem;
+  display: block;
+  margin: 0 auto;
+}
+.container2 .right-side2 .image img {
+  width: 53rem;
+  height: 59.3rem;
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.container2 .right-side2 .image .protein {
+  animation: firstImageFade 12s infinite ease-in-out;
+}
+.container2 .right-side2 .image .pre-workout {
+  animation: secondImageFade 12s infinite ease-in-out;
+}
+@keyframes firstImageFade {
+  0%, 40% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  50%, 90% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+@keyframes secondImageFade {
+  0%, 40% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50%, 90% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 1400px) {
