@@ -1,6 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap");
+.products h1 {
+  color: rgb(140, 218, 63);
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+.products .products-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.products .products-container .bca {
+  border: 1px solid rgb(140, 218, 63);
+}
+.products .products-container .cards3 {
+  margin: 4rem 4rem;
+  max-width: 46.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.products .products-container .cards3 .seller {
+  color: black;
+  font-size: 1.6rem;
+  background-color: rgb(140, 218, 63);
+  width: 10rem;
+  padding: 4px 12px;
+  margin-top: 0;
+  align-self: flex-start;
+}
+.products .products-container .cards3 .bca-img {
+  max-width: 43rem;
+  max-height: 42rem;
+  display: flex;
+  margin: 0 auto;
+  padding: 0.1rem 0.1rem;
+}
+.products .products-container .cards3 button {
+  background-color: transparent;
+  border: 2px solid rgb(140, 218, 63);
+  color: rgb(140, 218, 63);
+  padding: 8px 15px;
+  margin: 4rem auto;
+  padding: 1.5rem 15rem;
+  cursor: pointer;
+  border-radius: 2.2rem;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+.products .products-container .cards3 button:hover {
+  background-color: rgb(140, 218, 63);
+  color: black;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -29,6 +83,8 @@ html, body {
 .container {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
 .left-side {
@@ -175,6 +231,12 @@ html, body {
   color: rgb(140, 218, 63);
   border: 1px solid rgb(140, 218, 63);
   margin-top: 3rem;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+.container2 .left-side2 button:hover {
+  background-color: rgb(140, 218, 63);
+  color: black;
 }
 .container2 .right-side2 {
   width: 53rem;
@@ -365,15 +427,14 @@ html, body {
 }
 @media screen and (max-width: 768px) {
   .right-side .cart-link {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .right-side .burger-menu {
-    display: flex;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .right-side .search-btn {
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   .container2 {
     padding: 2rem 2rem;
@@ -402,62 +463,78 @@ html, body {
 @media screen and (max-width: 550px) {
   .container2 {
     padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: 12rem 20rem;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 36rem;
+  }
+  .container2 .left-side2 {
+    display: contents;
   }
   .container2 .left-side2 .headers {
-    font-size: 3.5rem;
-    line-height: 2rem;
+    font-size: 2.9rem;
+    line-height: 2.6rem;
+    grid-column: 1/2;
+    grid-row: 1;
+    margin-top: 3rem;
+    gap: 1rem;
+    text-align: left;
+    width: -moz-max-content;
+    width: max-content;
+    margin-bottom: 0rem;
   }
   .container2 .left-side2 p {
-    margin-top: 2rem;
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-    width: 20rem;
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+    width: 14rem;
+    grid-column: 1/2;
+    grid-row: 2;
+    margin-top: -4rem;
   }
   .container2 .left-side2 button {
-    margin-top: 2rem;
-    width: 19rem;
-    height: 4rem;
-    font-size: 1.5rem;
+    margin-top: 0rem;
+    cursor: pointer;
+    grid-column: 1/3;
+    grid-row: 3;
+    margin-top: 0rem;
+    width: 100%;
+    height: 5rem;
+    font-size: 1.6rem;
+    justify-self: center;
+  }
+  .container2 .left-side2 button:hover {
+    background-color: rgb(140, 218, 63);
   }
   .container2 .right-side2 {
     width: 20rem;
-    height: 25rem;
+    height: 35rem;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin-top: 3rem;
+  }
+  .container2 .right-side2 .image {
+    width: 100%;
+    height: 100%;
+  }
+  .container2 .right-side2 .image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media screen and (max-width: 450px) {
-  .right-side .cart-link {
-    font-size: 1.8rem;
-  }
-  .right-side .burger-menu {
-    font-size: 1.8rem;
-  }
-  .right-side .search-btn {
-    font-size: 1.8rem;
-  }
-  .right-side .search-btn {
-    font-size: 2rem;
-    margin-top: 2rem;
-  }
   .right-side .wrapper {
     background-size: cover;
     background-size: 100% auto;
   }
 }
 @media screen and (max-width: 360px) {
-  .right-side .cart-link {
-    font-size: 1.4rem;
-  }
-  .right-side .burger-menu {
-    font-size: 1.4rem;
-  }
-  .right-side .search-btn {
-    font-size: 1.4rem;
-    margin-top: 1rem;
-  }
-  .left-side span {
-    font-size: 2.5rem;
-  }
-  .left-side p {
-    font-size: 1rem;
+  .container2 {
+    grid-template-columns: 10rem 17rem;
   }
 }/*# sourceMappingURL=style.css.map */

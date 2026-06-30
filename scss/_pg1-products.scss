@@ -1,0 +1,75 @@
+
+@use '_config';
+
+.products{
+
+        h1{
+            color:config.$primary-color;
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4rem;
+            margin-top: 4rem;
+        }
+
+    .products-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+
+
+
+
+        .bca{
+            border: 1px solid config.$primary-color;
+        }
+
+        .cards3{
+            margin: 4rem 4rem;
+            max-width: 46.4rem;
+            display: flex;
+            flex-direction: column;
+
+            
+
+
+            .seller{
+                color: black;
+                font-size: 1.6rem;
+                background-color: config.$primary-color;
+                width: 10rem;
+                padding: 4px 12px;
+                margin-top: 0; 
+                align-self: flex-start;
+
+
+            
+
+            }
+
+            .bca-img{
+                max-width: 43rem;
+                max-height: 42rem;
+                display: flex;
+                margin: 0 auto;
+                padding: 0.1rem 0.1rem;
+
+            }
+
+            button{
+                background-color: transparent;
+                border: 2px solid config.$primary-color;
+                color: config.$primary-color;
+                padding: 8px 15px;
+                margin: 4rem  auto;
+                padding: 1.5rem 15rem;
+                cursor: pointer;
+                border-radius: 2.2rem;
+                @include config.button-hover;
+
+
+            }
+        }
+    }
+}
