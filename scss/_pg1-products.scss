@@ -1,40 +1,33 @@
 
+
 @use '_config';
 
-.products{
+.products {
+    h1 {
+        color: config.$primary-color;
+        font-size: 4rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+    }
 
-        h1{
-            color:config.$primary-color;
-            font-size: 4rem;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 4rem;
-            margin-top: 4rem;
-        }
-
-    .products-container{
+    .products-container {
         display: flex;
         justify-content: center;
         flex-direction: row;
 
-
-
-
-
-        .bca{
+        .bca {
             border: 1px solid config.$primary-color;
         }
 
-        .cards3{
+        .cards3 {
             margin: 4rem 4rem;
             max-width: 46.4rem;
             display: flex;
             flex-direction: column;
 
-            
-
-
-            .seller{
+            .seller {
                 color: black;
                 font-size: 1.6rem;
                 background-color: config.$primary-color;
@@ -42,83 +35,66 @@
                 padding: 4px 12px;
                 margin-top: 0; 
                 align-self: flex-start;
-
-
-            
-
             }
 
-            .bca-img{
+
+            .bca-img {
                 max-width: 43rem;
                 max-height: 42rem;
                 display: flex;
                 margin: 0 auto;
                 padding: 0.1rem 0.1rem;
-                position: relative;
+                position: relative; 
                 overflow: hidden;
 
-
-                .main-img{
-                    a {
+                a {
                     display: block;
                     width: 100%;
                     height: 100%;
-                     }
+                }
 
 
-                     .main-img{
-                        display: block;
-                        transition: opacity 0.4 ease;
-                        object-fit: contain;
-                     }
+                .main-img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transition: opacity 0.4s ease; 
+                }
 
-                     .bca-hover{
-                        position:absolute;
-                        object-fit: contain;
+                .bca-hover {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    opacity: 0; 
+                    transition: opacity 0.4s ease; 
+                }
+
+
+                &:hover {
+                    img.main-img {
                         opacity: 0;
-                        transition: opacity 0.4 ease;
-                     }
-
-
-                }
-
-                
-
-            }
-
-            .cards3{
-                &:hover{
-                    .bca-img{
-                        .main-img{
-                            opacity: 0;
-                        }
-
-                        .bca-hover{
-                            opacity: 1;
-                        }
                     }
-        
+                    .bca-hover {
+                        opacity: 1;
+                    }
                 }
-          
             }
 
-  
 
-
-            
-
-            button{
+            button {
                 background-color: transparent;
                 border: 2px solid config.$primary-color;
                 color: config.$primary-color;
-                padding: 8px 15px;
-                margin: 4rem  auto;
+                margin: 4rem auto;
                 padding: 1.5rem 15rem;
                 cursor: pointer;
                 border-radius: 2.2rem;
+                transition: background-color 0.3s ease, color 0.3s ease;
                 @include config.button-hover;
-
-
             }
         }
     }
