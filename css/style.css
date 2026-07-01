@@ -38,6 +38,32 @@
   display: flex;
   margin: 0 auto;
   padding: 0.1rem 0.1rem;
+  position: relative;
+  overflow: hidden;
+}
+.products .products-container .cards3 .bca-img .main-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.products .products-container .cards3 .bca-img .main-img .main-img {
+  display: block;
+  transition: opacity 0.4 ease;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.products .products-container .cards3 .bca-img .main-img .bca-hover {
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.4 ease;
+}
+.products .products-container .cards3 .cards3:hover .bca-img .main-img {
+  opacity: 0;
+}
+.products .products-container .cards3 .cards3:hover .bca-img .bca-hover {
+  opacity: 1;
 }
 .products .products-container .cards3 button {
   background-color: transparent;
@@ -54,6 +80,61 @@
   background-color: rgb(140, 218, 63);
   color: black;
 }
+.products .products-container .cards3 button:active {
+  transform: scale(0.95);
+}
+
+.fixed-socials {
+  position: fixed;
+  right: 4rem;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  z-index: 5;
+}
+.fixed-socials a {
+  color: white;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.fixed-socials a:hover {
+  color: rgb(140, 218, 63);
+  transform: scale(1.1);
+}
+.fixed-socials a:active {
+  transform: scale(0.85);
+  color: #ffffff;
+}
+
+.fixed-chat {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  z-index: 1000;
+}
+.fixed-chat button {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.082);
+  color: rgb(140, 218, 63);
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.fixed-chat button:hover {
+  color: rgb(140, 218, 63);
+  transform: scale(1.1);
+}
+.fixed-chat button:active {
+  transform: scale(0.85);
+  color: #ffffff;
+}
 
 html {
   font-size: 62.5%;
@@ -61,7 +142,11 @@ html {
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  max-width: 100%;
+  background-image: url("../images/background-suppliments.avif");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
   background-color: #0e1829;
 }
 
@@ -72,19 +157,19 @@ html, body {
   animation-duration: 1s;
 }
 
+header {
+  position: sticky;
+  top: 0;
+}
+
 .wrapper {
-  background-image: url("../images/background-suppliments.avif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
 }
 
 .left-side {
@@ -237,6 +322,9 @@ html, body {
 .container2 .left-side2 button:hover {
   background-color: rgb(140, 218, 63);
   color: black;
+}
+.container2 .left-side2 button:active {
+  transform: scale(0.95);
 }
 .container2 .right-side2 {
   width: 53rem;

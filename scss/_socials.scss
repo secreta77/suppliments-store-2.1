@@ -1,0 +1,46 @@
+@use 'config';
+
+.fixed-socials{
+    position: fixed;
+    right: 4rem;       
+    top: 50%;        
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;       
+    z-index: 5;
+
+a{
+    color: white;
+    font-size: 2rem;
+    @include config.logo-txt-hover;
+  
+}
+
+
+}
+
+
+.fixed-chat{
+    position: fixed;
+    bottom: 4rem;     
+    right: 4rem;       
+    z-index: 1000;
+
+
+button{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%; 
+        background-color:transparent; 
+        border: 1px solid rgba(255, 255, 255, 0.082);
+        color: config.$primary-color; 
+        font-size: 2.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include config.logo-txt-hover;
+
+
+}
+}

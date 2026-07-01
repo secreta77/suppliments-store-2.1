@@ -1,5 +1,6 @@
 @use '_config';
 @use '_pg1-products';
+@use '_socials';
 
 
 html {
@@ -8,9 +9,12 @@ html {
 
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
-    // background-color: #0f192a; 
-    background-color: #0e1829; 
+    max-width: 100%;
+    background-image: url('../images/background-suppliments.avif'); 
+    background-repeat: no-repeat;    
+    background-size: 100% auto; 
+    background-position: top center; 
+    background-color: #0e1829;
    
 }
 
@@ -34,12 +38,17 @@ html, body {
 
 // header
 
+
+header{
+    position: sticky;
+    top: 0;
+
+    
+}
+
 .wrapper{
-    background-image: url('../images/background-suppliments.avif'); 
-    background-repeat: no-repeat;    
-    background-size: cover;        
-    background-position: center center;
     min-height: 100vh;
+    overflow-x: hidden;
 
     
 
@@ -50,8 +59,7 @@ html, body {
 .container{
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
+
 
 
 }

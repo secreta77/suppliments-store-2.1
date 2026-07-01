@@ -54,8 +54,58 @@
                 display: flex;
                 margin: 0 auto;
                 padding: 0.1rem 0.1rem;
+                position: relative;
+                overflow: hidden;
+
+
+                .main-img{
+                    a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                     }
+
+
+                     .main-img{
+                        display: block;
+                        transition: opacity 0.4 ease;
+                        object-fit: contain;
+                     }
+
+                     .bca-hover{
+                        position:absolute;
+                        object-fit: contain;
+                        opacity: 0;
+                        transition: opacity 0.4 ease;
+                     }
+
+
+                }
+
+                
 
             }
+
+            .cards3{
+                &:hover{
+                    .bca-img{
+                        .main-img{
+                            opacity: 0;
+                        }
+
+                        .bca-hover{
+                            opacity: 1;
+                        }
+                    }
+        
+                }
+          
+            }
+
+  
+
+
+            
 
             button{
                 background-color: transparent;
